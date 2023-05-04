@@ -15,6 +15,7 @@
         <input type="text" name="word" id="word">
         
         <button type="submit">Invia</button>
+        <button type="reset">Annulla</button>
     </form>
 </body>
 </html>

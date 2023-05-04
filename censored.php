@@ -1,7 +1,14 @@
 <?php
 $textarea = $_GET['textarea'];
 $word = $_GET['word'];
-// $censored_text = explode(",", $textarea);
+
+// if(isset($_GET['textarea'])){
+//     $textarea = $_GET['textarea'];
+// };
+
+// if(isset($_GET['word'])){
+//   $word = $_GET['word'];
+// };
 $censored_text = str_replace($word,'***', $textarea);
 
 ?>
@@ -17,8 +24,10 @@ $censored_text = str_replace($word,'***', $textarea);
 <body>
     <h2>Testo originale</h2>
     <p><?php echo $textarea; ?></p>
-
+    <p>Lunghezza testo: <?php echo strlen($textarea); ?> caratteri</p>
+    
     <h2>Testo censurato</h2>
     <p><?php echo $censored_text; ?></p>
+    <p>Lunghezza testo: <?php echo strlen($censored_text); ?> caratteri</p>
 </body>
 </html>
